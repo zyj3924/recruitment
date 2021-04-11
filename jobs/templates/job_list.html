@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content%}
+<ul>
+    {% for job in job_list%}
+        <li>{{job.type_name}}<a href="/job/detail/?id={{job.id}}">{{job.job_name}}</a> {{job.city_name}}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
